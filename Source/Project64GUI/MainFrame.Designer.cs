@@ -53,6 +53,7 @@
 			this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutProject64ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.listView1 = new System.Windows.Forms.ListView();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -158,6 +159,7 @@
             this.toolStripSeparator5,
             this.settingsToolStripMenuItem});
 			this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+			this.optionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
 			this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
 			this.optionsToolStripMenuItem.Text = "Options";
 			// 
@@ -237,11 +239,20 @@
 			this.aboutProject64ToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
 			this.aboutProject64ToolStripMenuItem.Text = "About Project64";
 			// 
+			// listView1
+			// 
+			this.listView1.Location = new System.Drawing.Point(0, 27);
+			this.listView1.Name = "listView1";
+			this.listView1.Size = new System.Drawing.Size(624, 441);
+			this.listView1.TabIndex = 2;
+			this.listView1.UseCompatibleStateImageBehavior = false;
+			// 
 			// MainFrame
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(624, 493);
+			this.Controls.Add(this.listView1);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
@@ -282,6 +293,7 @@
 		private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripMenuItem aboutProject64ToolStripMenuItem;
+		private System.Windows.Forms.ListView listView1;
 	}
 }
 
