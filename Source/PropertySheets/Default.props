@@ -6,8 +6,6 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<IntDir>$(BuildBase)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-		<OutDir>$(TargetBase)$(Platform)\$(Configuration)\</OutDir>
 	</PropertyGroup>
 
 	<ItemDefinitionGroup>

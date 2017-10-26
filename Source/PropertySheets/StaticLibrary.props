@@ -6,7 +6,7 @@
 	<Import Project="$(Configuration).props"/>
 
 	<PropertyGroup>
-		<OutDir>$(OutDir)Lib\$(ProjectName)\</OutDir>
+		<OutDir>$(OutDirBase)Lib\$(ProjectName)\</OutDir>
 	</PropertyGroup>
 
 	<ItemDefinitionGroup>

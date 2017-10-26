@@ -5,8 +5,8 @@
 		<Platform Condition="'$(Platform)' == ''">Win32</Platform>
 		<Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
 		<SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory)</SolutionDir>
-		<BuildBase Condition="'$(BuildBase)' == ''">$(SolutionDir)Build\</BuildBase>
-		<TargetBase Condition="'$(TargetBase)' == ''">$(SolutionDir)Target\</TargetBase>
+		<IntDir Condition="'$(IntDir)' == ''">$(SolutionDir)Build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+		<OutDirBase Condition="'$(OutDir)' == ''">$(SolutionDir)Target\$(Platform)\$(Configuration)\</OutDirBase>
 	</PropertyGroup>
 
 </Project>
