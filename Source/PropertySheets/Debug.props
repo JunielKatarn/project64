@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<PreprocessorDefinitions>_DEBUG;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<Optimization>Disabled</Optimization>
+			<InlineFunctionExpansion>Default</InlineFunctionExpansion>
+			<IntrinsicFunctions>false</IntrinsicFunctions>
+			<!--<FavorSizeOrSpeed>Neither</FavorSizeOrSpeed> TODO:check-->
+			<OmitFramePointers>false</OmitFramePointers>
+			<EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<!--<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>-->
+			<!--<RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary> DLL-only-->
+		</ClCompile>
+		<!--<Midl>
+			<PreprocessorDefinitions>_DEBUG;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</Midl>
+		<ResourceCompile>
+			<PreprocessorDefinitions>_DEBUG;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ResourceCompile>-->
+	</ItemDefinitionGroup>
+</Project>

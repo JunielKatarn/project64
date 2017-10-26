@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+	<PropertyGroup Label="Configuration">
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<IntDir>$(BuildBase)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+		<OutDir>$(TargetBase)$(Platform)\$(Configuration)\</OutDir>
+	</PropertyGroup>
+
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>$(SolutionDir)\Source;$(SolutionDir)\Source\3rdParty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<!-- <FloatingPointModel>Precise</FloatingPointModel> TODO:TEST  -->
+			<WarningLevel>Level4</WarningLevel>
+			<!--<CallingConvention>Cdecl</CallingConvention> TODO:DLL/EXE only-->
+		</ClCompile>
+	</ItemDefinitionGroup>
+
+</Project>
