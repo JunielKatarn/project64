@@ -11,7 +11,7 @@
 			<EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
 			<WholeProgramOptimization>false</WholeProgramOptimization>
 			<!--<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>-->
-			<!--<RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary> DLL-only-->
+			<RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary><!--DLL-only-->
 		</ClCompile>
 		<!--<Midl>
 			<PreprocessorDefinitions>_DEBUG;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
