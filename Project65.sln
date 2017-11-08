@@ -28,6 +28,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7zip", "Source\3rdParty\7zi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "Source\3rdParty\zlib\zlib65.vcxproj", "{731BD205-2826-4631-B7AF-117658E88DBC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "png", "Source\3rdParty\png\png65.vcxproj", "{17836496-31B0-46F2-B1B1-366D7DF6F04C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -64,6 +66,14 @@ Global
 		{731BD205-2826-4631-B7AF-117658E88DBC}.Release|x64.Build.0 = Release|x64
 		{731BD205-2826-4631-B7AF-117658E88DBC}.Release|x86.ActiveCfg = Release|Win32
 		{731BD205-2826-4631-B7AF-117658E88DBC}.Release|x86.Build.0 = Release|Win32
+		{17836496-31B0-46F2-B1B1-366D7DF6F04C}.Debug|x64.ActiveCfg = Debug|x64
+		{17836496-31B0-46F2-B1B1-366D7DF6F04C}.Debug|x64.Build.0 = Debug|x64
+		{17836496-31B0-46F2-B1B1-366D7DF6F04C}.Debug|x86.ActiveCfg = Debug|Win32
+		{17836496-31B0-46F2-B1B1-366D7DF6F04C}.Debug|x86.Build.0 = Debug|Win32
+		{17836496-31B0-46F2-B1B1-366D7DF6F04C}.Release|x64.ActiveCfg = Release|x64
+		{17836496-31B0-46F2-B1B1-366D7DF6F04C}.Release|x64.Build.0 = Release|x64
+		{17836496-31B0-46F2-B1B1-366D7DF6F04C}.Release|x86.ActiveCfg = Release|Win32
+		{17836496-31B0-46F2-B1B1-366D7DF6F04C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +81,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3326E128-33AF-422C-BB7C-67CC6B915610} = {A64C7B02-3EBC-4008-89FB-6BB35AD823AC}
 		{731BD205-2826-4631-B7AF-117658E88DBC} = {A64C7B02-3EBC-4008-89FB-6BB35AD823AC}
+		{17836496-31B0-46F2-B1B1-366D7DF6F04C} = {A64C7B02-3EBC-4008-89FB-6BB35AD823AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5BBF96A3-BD43-49D8-86A8-A442C3CB7661}
