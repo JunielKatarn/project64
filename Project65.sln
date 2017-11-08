@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0680DE97-8EB4-4B26-9C32-CF7FB16B5D42}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PropertySheets", "PropertyS
 	ProjectSection(SolutionItems) = preProject
 		Source\PropertySheets\Debug.props = Source\PropertySheets\Debug.props
 		Source\PropertySheets\Default.props = Source\PropertySheets\Default.props
+		Source\PropertySheets\Release.props = Source\PropertySheets\Release.props
 		Source\PropertySheets\StaticLibrary.props = Source\PropertySheets\StaticLibrary.props
 		Source\PropertySheets\Win32.props = Source\PropertySheets\Win32.props
 		Source\PropertySheets\x64.props = Source\PropertySheets\x64.props
