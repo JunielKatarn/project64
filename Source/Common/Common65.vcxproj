@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>Common</ProjectName>
     <ProjectGuid>{B4A4B994-9111-42B1-93C2-6F1CA8BC4421}</ProjectGuid>
+    <ProjectName>Common</ProjectName>
     <RootNamespace>Common</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
