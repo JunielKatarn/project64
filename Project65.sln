@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PropertySheets", "PropertyS
 		Source\PropertySheets\x64.props = Source\PropertySheets\x64.props
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rdParty", "3rdParty", "{A64C7B02-3EBC-4008-89FB-6BB35AD823AC}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7zip", "Source\3rdParty\7zip\7zip65.vcxproj", "{3326E128-33AF-422C-BB7C-67CC6B915610}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "Source\3rdParty\zlib\zlib65.vcxproj", "{731BD205-2826-4631-B7AF-117658E88DBC}"
@@ -44,12 +46,16 @@ Global
 		{B4A4B994-9111-42B1-93C2-6F1CA8BC4421}.Release|x86.Build.0 = Release|Win32
 		{3326E128-33AF-422C-BB7C-67CC6B915610}.Debug|x64.ActiveCfg = Debug|x64
 		{3326E128-33AF-422C-BB7C-67CC6B915610}.Debug|x64.Build.0 = Debug|x64
+		{3326E128-33AF-422C-BB7C-67CC6B915610}.Debug|x64.Deploy.0 = Debug|x64
 		{3326E128-33AF-422C-BB7C-67CC6B915610}.Debug|x86.ActiveCfg = Debug|Win32
 		{3326E128-33AF-422C-BB7C-67CC6B915610}.Debug|x86.Build.0 = Debug|Win32
+		{3326E128-33AF-422C-BB7C-67CC6B915610}.Debug|x86.Deploy.0 = Debug|Win32
 		{3326E128-33AF-422C-BB7C-67CC6B915610}.Release|x64.ActiveCfg = Release|x64
 		{3326E128-33AF-422C-BB7C-67CC6B915610}.Release|x64.Build.0 = Release|x64
+		{3326E128-33AF-422C-BB7C-67CC6B915610}.Release|x64.Deploy.0 = Release|x64
 		{3326E128-33AF-422C-BB7C-67CC6B915610}.Release|x86.ActiveCfg = Release|Win32
 		{3326E128-33AF-422C-BB7C-67CC6B915610}.Release|x86.Build.0 = Release|Win32
+		{3326E128-33AF-422C-BB7C-67CC6B915610}.Release|x86.Deploy.0 = Release|Win32
 		{731BD205-2826-4631-B7AF-117658E88DBC}.Debug|x64.ActiveCfg = Debug|x64
 		{731BD205-2826-4631-B7AF-117658E88DBC}.Debug|x64.Build.0 = Debug|x64
 		{731BD205-2826-4631-B7AF-117658E88DBC}.Debug|x86.ActiveCfg = Debug|Win32
@@ -61,6 +67,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3326E128-33AF-422C-BB7C-67CC6B915610} = {A64C7B02-3EBC-4008-89FB-6BB35AD823AC}
+		{731BD205-2826-4631-B7AF-117658E88DBC} = {A64C7B02-3EBC-4008-89FB-6BB35AD823AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5BBF96A3-BD43-49D8-86A8-A442C3CB7661}
