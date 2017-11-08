@@ -13,7 +13,7 @@
 			v141_clang_c2 VS2015 with Clang front-end
 			LLVM-vs2014   Clang 5
 		-->
-		<PlatformToolset Conditio="'$(PlatformToolset)'==''">LLVM-vs2014</PlatformToolset>
+		<PlatformToolset>LLVM-vs2014</PlatformToolset>
 	</PropertyGroup>
 
 	<PropertyGroup>
