@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0680DE97-8EB4-4B26-9C32-CF7FB16B5D42}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PropertySheets", "PropertyS
 	ProjectSection(SolutionItems) = preProject
 		Source\PropertySheets\Debug.props = Source\PropertySheets\Debug.props
 		Source\PropertySheets\Default.props = Source\PropertySheets\Default.props
+		Source\PropertySheets\InputPlugin.props = Source\PropertySheets\InputPlugin.props
 		Source\PropertySheets\Release.props = Source\PropertySheets\Release.props
 		Source\PropertySheets\StaticLibrary.props = Source\PropertySheets\StaticLibrary.props
 		Source\PropertySheets\Win32.props = Source\PropertySheets\Win32.props
@@ -37,6 +38,33 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NRageInput", "Source\nragev20\NRage_Input_V265.vcxproj", "{FD617E80-9E40-4138-85DA-B94633972E6A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project64core", "Source\Project64-core\Project64-core65.vcxproj", "{00C7B43A-DED7-4DF0-B072-9A5783EF866D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{95F7D865-9902-4959-B4A1-5CFB1012D58A}"
+	ProjectSection(SolutionItems) = preProject
+		Source\PropertySheets\Application\Debug.props = Source\PropertySheets\Application\Debug.props
+		Source\PropertySheets\Application\Release.props = Source\PropertySheets\Application\Release.props
+		Source\PropertySheets\Application\Win32.props = Source\PropertySheets\Application\Win32.props
+		Source\PropertySheets\Application\x64.props = Source\PropertySheets\Application\x64.props
+		Source\PropertySheets\Application\x86.props = Source\PropertySheets\Application\x86.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StaticLibrary", "StaticLibrary", "{6FDB2A9E-15F0-4DBA-8318-764FCE1BD789}"
+	ProjectSection(SolutionItems) = preProject
+		Source\PropertySheets\StaticLibrary\Debug.props = Source\PropertySheets\StaticLibrary\Debug.props
+		Source\PropertySheets\StaticLibrary\Release.props = Source\PropertySheets\StaticLibrary\Release.props
+		Source\PropertySheets\StaticLibrary\Win32.props = Source\PropertySheets\StaticLibrary\Win32.props
+		Source\PropertySheets\StaticLibrary\x64.props = Source\PropertySheets\StaticLibrary\x64.props
+		Source\PropertySheets\StaticLibrary\x86.props = Source\PropertySheets\StaticLibrary\x86.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicLibrary", "DynamicLibrary", "{CC778819-6B9F-48D8-8093-B063CE8B3BD6}"
+	ProjectSection(SolutionItems) = preProject
+		Source\PropertySheets\DynamicLibrary\Debug.props = Source\PropertySheets\DynamicLibrary\Debug.props
+		Source\PropertySheets\DynamicLibrary\Release.props = Source\PropertySheets\DynamicLibrary\Release.props
+		Source\PropertySheets\DynamicLibrary\Win32.props = Source\PropertySheets\DynamicLibrary\Win32.props
+		Source\PropertySheets\DynamicLibrary\x64.props = Source\PropertySheets\DynamicLibrary\x64.props
+		Source\PropertySheets\DynamicLibrary\x86.props = Source\PropertySheets\DynamicLibrary\x86.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,6 +143,9 @@ Global
 		{731BD205-2826-4631-B7AF-117658E88DBC} = {A64C7B02-3EBC-4008-89FB-6BB35AD823AC}
 		{17836496-31B0-46F2-B1B1-366D7DF6F04C} = {A64C7B02-3EBC-4008-89FB-6BB35AD823AC}
 		{FD617E80-9E40-4138-85DA-B94633972E6A} = {13BCEBF6-5DDD-46A1-BCE4-D172DB83ADA7}
+		{95F7D865-9902-4959-B4A1-5CFB1012D58A} = {2AB90A70-49C0-49E7-97F7-742CEFD5D7C4}
+		{6FDB2A9E-15F0-4DBA-8318-764FCE1BD789} = {2AB90A70-49C0-49E7-97F7-742CEFD5D7C4}
+		{CC778819-6B9F-48D8-8093-B063CE8B3BD6} = {2AB90A70-49C0-49E7-97F7-742CEFD5D7C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5BBF96A3-BD43-49D8-86A8-A442C3CB7661}
