@@ -13,8 +13,32 @@
 #include "PluginList.h"
 #include <Project64-core/Plugins/PluginBase.h>
 
+static std::vector<CPath> SplitPath(std::string subject, char delim)
+{
+	std::vector<CPath> result;
+
+	size_t count, start = 0;
+	for (count = 0; count + start < subject.size(); count++)
+	{
+		if (delim == subject[count]) //;abc;
+		{
+			if (count != 0)
+				result.push_back(CPath(subject.substr(start, count)));
+
+			start += count + 1;
+			count = 0;
+		}
+	}
+
+	if (count != 0)
+		result.push_back(subject.substr(start, count));
+
+	return result;
+}
+
 CPluginList::CPluginList(bool bAutoFill /* = true */) :
-m_PluginDir(g_Settings->LoadStringVal(Directory_Plugin), "")
+//m_PluginDir(g_Settings->LoadStringVal(Directory_Plugin), "")
+m_PluginDirs(SplitPath(g_Settings->LoadStringVal(Directory_Plugin), ';'))
 {
     if (bAutoFill)
     {
@@ -44,13 +68,15 @@ bool CPluginList::LoadList()
 {
     WriteTrace(TraceUserInterface, TraceDebug, "Start");
     m_PluginList.clear();
-    AddPluginFromDir(m_PluginDir);
+	for (CPath p : m_PluginDirs)
+		AddPluginFromDir(p);
     WriteTrace(TraceUserInterface, TraceDebug, "Done");
     return true;
 }
 
 void CPluginList::AddPluginFromDir(CPath Dir)
 {
+	size_t len = strlen(Dir);
     Dir.SetNameExtension("*");
     if (Dir.FindFirst(CPath::FIND_ATTRIBUTE_SUBDIR))
     {
@@ -101,7 +127,7 @@ void CPluginList::AddPluginFromDir(CPath Dir)
             }
 
             Plugin.FullPath = Dir;
-            Plugin.FileName = stdstr((const char *)Dir).substr(strlen(m_PluginDir));
+            Plugin.FileName = stdstr((const char *)Dir).substr(len);
 
             if (GetProcAddress(hLib, "DllAbout") != NULL)
             {

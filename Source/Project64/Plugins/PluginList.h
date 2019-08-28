@@ -33,9 +33,10 @@ public:
 
 private:
     typedef std::vector<PLUGIN>   PluginList;
+    typedef std::vector<CPath>    CPathList;
 
     PluginList m_PluginList;
-    CPath      m_PluginDir;
+    CPathList  m_PluginDirs;
 
     void AddPluginFromDir(CPath Dir);
 };

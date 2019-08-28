@@ -1,0 +1,12 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = false
+
+[*.{c,h,cpp,hpp,ipp}]
+indent_style = space
+
+[*.{config,vcxproj,props,targets}]
+end_of_line = crlf
+indent_size = 2
+indent_style = space
