@@ -169,6 +169,7 @@ private:
 
     SettingID m_PluginDirSetting;
     stdstr m_PluginDir;
+    std::vector<stdstr> m_PluginDirs;
 
     //Plugins
     CGfxPlugin      * m_Gfx;

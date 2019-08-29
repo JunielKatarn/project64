@@ -14,11 +14,35 @@
 #include <Project64-core/Plugins/PluginClass.h>
 #include <Common/path.h>
 
+static std::vector<stdstr> SplitPath(stdstr subject, char delim)
+{
+    std::vector<stdstr> result;
+
+    size_t count, start = 0;
+    for (count = 0; count + start < subject.size(); ++count)
+    {
+        if (delim == subject[count])
+        {
+            if (count != 0)
+                result.push_back(stdstr(subject.substr(start, count)));
+
+            start += count + 1;
+            count = 0;
+        }
+    }
+
+    if (count != 0)
+        result.push_back(subject.substr(start, count));
+
+    return result;
+}
+
 CPlugins::CPlugins(SettingID PluginDirSetting, bool SyncPlugins) :
 m_MainWindow(NULL),
 m_SyncWindow(NULL),
 m_PluginDirSetting(PluginDirSetting),
 m_PluginDir(g_Settings->LoadStringVal(PluginDirSetting)),
+m_PluginDirs(SplitPath(g_Settings->LoadStringVal(PluginDirSetting), ';')),
 m_Gfx(NULL),
 m_Audio(NULL),
 m_RSP(NULL),
@@ -151,10 +175,13 @@ void CPlugins::CreatePlugins(void)
 {
     WriteTrace(TracePlugins, TraceInfo, "Start");
 
-    LoadPlugin(Game_Plugin_Gfx, Plugin_GFX_CurVer, m_Gfx, m_PluginDir.c_str(), m_GfxFile, TraceGFXPlugin, "GFX", m_SyncPlugins);
-    LoadPlugin(Game_Plugin_Audio, Plugin_AUDIO_CurVer, m_Audio, m_PluginDir.c_str(), m_AudioFile, TraceAudioPlugin, "Audio", m_SyncPlugins);
-    LoadPlugin(Game_Plugin_RSP, Plugin_RSP_CurVer, m_RSP, m_PluginDir.c_str(), m_RSPFile, TraceRSPPlugin, "RSP", m_SyncPlugins);
-    LoadPlugin(Game_Plugin_Controller, Plugin_CONT_CurVer, m_Control, m_PluginDir.c_str(), m_ControlFile, TraceControllerPlugin, "Control", m_SyncPlugins);
+    for (stdstr& dir : m_PluginDirs)
+    {
+        LoadPlugin(Game_Plugin_Gfx, Plugin_GFX_CurVer, m_Gfx, dir.c_str(), m_GfxFile, TraceGFXPlugin, "GFX", m_SyncPlugins);
+        LoadPlugin(Game_Plugin_Audio, Plugin_AUDIO_CurVer, m_Audio, dir.c_str(), m_AudioFile, TraceAudioPlugin, "Audio", m_SyncPlugins);
+        LoadPlugin(Game_Plugin_RSP, Plugin_RSP_CurVer, m_RSP, dir.c_str(), m_RSPFile, TraceRSPPlugin, "RSP", m_SyncPlugins);
+        LoadPlugin(Game_Plugin_Controller, Plugin_CONT_CurVer, m_Control, dir.c_str(), m_ControlFile, TraceControllerPlugin, "Control", m_SyncPlugins);
+    }
 
     //Enable debugger
     if (m_RSP != NULL && m_RSP->EnableDebugging)

@@ -18,26 +18,25 @@ static std::vector<CPath> SplitPath(std::string subject, char delim)
 	std::vector<CPath> result;
 
 	size_t count, start = 0;
-	for (count = 0; count + start < subject.size(); count++)
-	{
-		if (delim == subject[count]) //;abc;
-		{
-			if (count != 0)
-				result.push_back(CPath(subject.substr(start, count)));
+    for (count = 0; count + start < subject.size(); ++count)
+    {
+        if (delim == subject[count])
+        {
+            if (count != 0)
+                result.push_back(subject.substr(start, count));
 
-			start += count + 1;
-			count = 0;
-		}
-	}
+            start += count + 1;
+            count = 0;
+        }
+    }
 
-	if (count != 0)
-		result.push_back(subject.substr(start, count));
+    if (count != 0)
+        result.push_back(subject.substr(start, count));
 
-	return result;
+    return result;
 }
 
 CPluginList::CPluginList(bool bAutoFill /* = true */) :
-//m_PluginDir(g_Settings->LoadStringVal(Directory_Plugin), "")
 m_PluginDirs(SplitPath(g_Settings->LoadStringVal(Directory_Plugin), ';'))
 {
     if (bAutoFill)
@@ -76,7 +75,7 @@ bool CPluginList::LoadList()
 
 void CPluginList::AddPluginFromDir(CPath Dir)
 {
-	size_t len = strlen(Dir);
+    size_t len = strlen(Dir);
     Dir.SetNameExtension("*");
     if (Dir.FindFirst(CPath::FIND_ATTRIBUTE_SUBDIR))
     {
